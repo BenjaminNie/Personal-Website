@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-style: solid;
+	border-width: 1px;
+	border-color: red;
+}
+
+body {
+	background-image: url("http://studentlife.mit.edu/sites/default/files/awards/2013/Putnam-2012-Fellows-Cropped2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: right bottom;
+}
+
+p {
+	margin: 5px 50px 5px 50px;
+}
+
+p.blogpost{
+	text-align:center;
+}
+
+/* Used for menu items */
+#navbar {   /*exclusively for nav bar */
+	position: fixed;
+	background-image: url("circuit.jpg");
+	padding: 0;
+	height: 60px; 
+	width: 100%;
+}
+
+#navbar ul {
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+	
+#navbar ul li {   /* padding is between content and border, margin is outside of border */
+	display: inline;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 30px 0px 30px;
+}
+
+#main-menu-item {
+	float: left;
+}
+
+#other-menu-item {
+	float: right;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+h1 {
