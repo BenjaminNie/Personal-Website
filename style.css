@@ -1,61 +1,101 @@
 * {
-	margin: 0;
-	padding: 0;
-	border-style: solid;
-	border-width: 1px;
-	border-color: red;
+	margin: 0px;
+	padding: 0px;
+	font-family:"Palatino Linotype", Palatino, serif;
+	border: solid;
 }
 
+/*
 body {
-	background-image: url("http://studentlife.mit.edu/sites/default/files/awards/2013/Putnam-2012-Fellows-Cropped2.jpg");
+	background-image: url("");
 	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: right bottom;
 }
+*/
 
 p {
-	margin: 5px 50px 5px 50px;
+	margin: 5px auto 5px auto;
+	max-width: 700px;
 }
 
-p.blogpost{
-	text-align:center;
+p.blog {
+}
+
+p.about {
+	max-width:600px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: grey;
+}
+
+a.green:hover {
+	color: #66FF99;
+}
+
+a.red:hover {
+	color: #FF0000;
+}
+
+a.blue:hover {
+	color: #0099FF;
+}
+
+a.purple:hover {
+	color: #9933FF;
+}
+
+a.black:hover {
+	color: #222222;
 }
 
 /* Used for menu items */
 #navbar {   /*exclusively for nav bar */
 	position: fixed;
-	background-image: url("circuit.jpg");
-	padding: 0;
-	height: 60px; 
+	padding: 10px 0px 10px 0px;
+	height: 30px; 
 	width: 100%;
-}
-
-#navbar ul {
-	margin: 0px;
-	padding: 0px 0px 0px 0px;
+	color: grey;
+	background-color: white;
+	border-bottom: solid;
+	border-color: black;
 }
 	
 #navbar ul li {   /* padding is between content and border, margin is outside of border */
 	display: inline;
-	margin: 0px 0px 0px 0px;
-	padding: 0px 30px 0px 30px;
 }
 
-#main-menu-item {
+#home-button {
+	font-size: 24px;
+	margin:0px 10px 0px 10px;
+}
+
+#left-menu-item {
 	float: left;
 }
 
-#other-menu-item {
+#right-menu-item {
 	float: right;
+	padding:6px 0px 0px 0px;
 }
 	
+#right-menu-item li {
+	margin:10px 40px 0px 5px;
+}
 	
-	
-	
-	
-	
-	
-	
+#about-picture {
+	margin:100px auto;
+	border: solid;
+	border-color: black;
+	border-width: 6px;
+}
+		
+
 	
 	
 	
