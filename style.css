@@ -2,7 +2,6 @@
 	margin: 0px;
 	padding: 0px;
 	font-family:"Palatino Linotype", Palatino, serif;
-	border: solid;
 }
 
 /*
@@ -14,20 +13,33 @@ body {
 }
 */
 
-p {
-	margin: 5px auto 5px auto;
+#content {
+	width: 100%;
 	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {	
+	max-width:700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 p.blog {
 }
 
 p.about {
-	max-width:600px;
+	margin:0px auto;
 }
+
+p.contact {
+	margin:100px auto;
+} 
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 a:visited {
@@ -89,47 +101,14 @@ a.black:hover {
 }
 	
 #about-picture {
-	margin:100px auto;
+	margin-top: 100px;
+	margin-bottom: 20px;
+
+	width: 100%;
+	max-width: 250px;
+	
 	border: solid;
 	border-color: black;
 	border-width: 6px;
 }
-		
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-h1 {
