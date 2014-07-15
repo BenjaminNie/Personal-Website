@@ -4,15 +4,6 @@
 	font-family:"Palatino Linotype", Palatino, serif;
 }
 
-/*
-body {
-	background-image: url("");
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: right bottom;
-}
-*/
-
 #content {
 	width: 100%;
 	max-width: 700px;
@@ -30,7 +21,7 @@ p.blog {
 }
 
 p.about {
-	margin:0px auto;
+	margin:10px auto 10px auto;
 }
 
 p.contact {
