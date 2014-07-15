@@ -18,6 +18,7 @@ p.about {
 }
 
 p.contact {
+	margin-bottom:20px;
 } 
 
 a {
@@ -43,6 +44,10 @@ a.blue:hover {
 
 a.purple:hover {
 	color: #9933FF;
+}
+
+a.yellow:hover {
+	color: #DAA520;
 }
 
 a.black:hover {
@@ -105,14 +110,39 @@ a.black:hover {
 	font-size: 20px;
 }
 
-#contact-mailman {
+#contact-picture {
 	margin-top: 100px;
         margin-bottom: 20px;
 
         width: 100%;
-        max-width: 250px;
+        max-width: 450px;
 
         border: solid;
         border-color: black;
         border-width: 6px;
+}
+
+#contact-linkedin {
+	color: green;
+        font-size: 20px;
+}
+
+#contact-quora {
+        color: red;
+        font-size: 20px;
+}
+
+#contact-twitter {
+        color: blue;
+        font-size: 20px;
+}
+
+#contact-mail {
+	color: purple;
+	font-size: 20px;
+}
+
+#contact-github {
+	color: #DAA520;
+	font-size: 20px;
 }
