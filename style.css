@@ -14,11 +14,10 @@ p.blog {
 }
 
 p.about {
-	margin:10px auto 10px auto;
+	margin-bottom:20px;
 }
 
 p.contact {
-	margin:100px auto;
 } 
 
 a {
@@ -104,4 +103,16 @@ a.black:hover {
 #about-projects {
 	color: #0099FF;
 	font-size: 20px;
+}
+
+#contact-mailman {
+	margin-top: 100px;
+        margin-bottom: 20px;
+
+        width: 100%;
+        max-width: 250px;
+
+        border: solid;
+        border-color: black;
+        border-width: 6px;
 }
