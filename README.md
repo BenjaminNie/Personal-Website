@@ -13,7 +13,7 @@ Immediate:
 Short term:
 - Enable Favricon
 - Enable Google Analytics
-
+- Read Javascript
 
 Long term:
 - Javascript map
