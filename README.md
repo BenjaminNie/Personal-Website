@@ -5,10 +5,9 @@ Please feel free to use my design as a template for your own website - Sharing i
 Actions List:
 
 Immediate:
-- Set up blog using PHP and mySQL
+- Set up blog using Python(Django) and mySQL
 - Add Github logo
 - Add Hamburger menu
-- Add Terence's Javascript for mobile optimization
 
 Short term:
 - Enable Favricon
