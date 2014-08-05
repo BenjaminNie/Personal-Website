@@ -17,4 +17,4 @@ Short term:
 Long term:
 - Javascript map
 - Search bar
-
+- Tags to posts
