@@ -5,7 +5,7 @@ Please feel free to use my design as a template for your own website - Sharing i
 Actions List:
 
 Immediate:
-- Set up blog using Python(Django) and mySQL
+- Set up blog using HUGO (Static web page generator, written in GoLang) 
 - Add Github logo
 - Add Hamburger menu
 
