@@ -5,4 +5,16 @@ Please feel free to use my design as a template for your own website - Sharing i
 Actions List:
 
 Immediate:
-- Set up blog using WordPress
+- Set up blog using Python(Django) and mySQL
+- Add Github logo
+- Add Hamburger menu
+
+Short term:
+- Enable Favricon
+- Enable Google Analytics
+- Read Javascript
+
+Long term:
+- Javascript map
+- Search bar
+
