@@ -31,10 +31,20 @@
 		<br><br><br><br><br><br><br><br><br>
         <?php
 		
-		# decoding JSON blog files
-		$fp = file_get_contents("json/July.json");
-		$json_a = json_decode($fp, true);
-		echo $json_a[ 'categories' ];
+		# Extract JSON objects from file and convert content to string
+		$file_content = file_get_contents("json/July.json");
+		$json = json_decode($file_content, true);
+
+		#testing purposes
+		var_dump($json);
+		echo "<br> <br> <br> <br>";
+
+		var_dump($json[0]);
+		echo "<br> <br> <br> <br>";
+
+		var_dump($json[0]["title"]);
+		echo "<br> <br> <br> <br>";
+
         ?>
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet tortor a ipsum fringilla pellentesque. In pretium, magna posuere semper egestas, urna ligula consectetur nunc, vitae gravida velit leo a elit. Vivamus sed turpis faucibus dui consequat gravida. In ultrices ipsum arcu, eu cursus nisi malesuada id. Etiam vitae ante facilisis, mollis dui ut, laoreet eros. Donec volutpat gravida purus, et pharetra sapien posuere et. Quisque consectetur nisi id est tincidunt imperdiet. Nam pellentesque tortor vitae nibh volutpat, et imperdiet metus mattis. Sed iaculis vitae orci ut rhoncus. Phasellus feugiat diam vel metus scelerisque gravida. Nunc dui nulla, pellentesque faucibus sapien et, ultricies venenatis velit. Duis vel lectus bibendum, placerat ipsum eu, hendrerit orci. Aliquam adipiscing euismod metus a ornare. Phasellus faucibus laoreet metus a bibendum. Vestibulum aliquam sapien eget mi volutpat, eget semper ante rhoncus. Suspendisse et erat id risus vestibulum porta. </p>
