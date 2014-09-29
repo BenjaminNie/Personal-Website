@@ -9,24 +9,11 @@
 	</head>
 	
 	<body>
-		<div id="navbar">
-			<ul>
-				<div id="left-menu-item">
-					<li id="home-button">Benjamin Nie</a></li>
-					<li><a href="https://ca.linkedin.com/in/benjaminnie" ><img src="images/linkedin.jpg"></a></li>
-					<li><a href="https://twitter.com/niebenjamin"><img src="images/twitter.jpg"></a></li>
-					<li><a href="https://www.quora.com/Benjamin-Nie"><img src="images/quora.jpg"></a></li>
-				</div>
-				<div id="right-menu-item">
-					<li><a href="blog.html" class="red">Blog</a></li>
-					<li><a href="projects.html" class="blue">Projects</a></li>
-					<li><a href="about.html" class="purple">About</a></li>
-					<li><a href="contact.html" class="green">Contact</a></li>
-				</div>
-			</ul>
-		</div>
-		
-
+		<?php
+		# generate navbar
+		$navbar_content = file_get_contents("navbar.html");
+		echo $navbar_content;
+		?>	
 
 		<br><br><br><br><br><br><br><br><br>
         <?php

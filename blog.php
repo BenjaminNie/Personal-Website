@@ -9,23 +9,12 @@
 	</head>
 	
 	<body>
-		<div id="navbar">
-			<ul>
-				<div id="left-menu-item">
-					<li id="home-button">Benjamin Nie</a></li>
-					<li><a href="https://ca.linkedin.com/in/benjaminnie" ><img src="images/linkedin.jpg"></a></li>
-					<li><a href="https://twitter.com/niebenjamin"><img src="images/twitter.jpg"></a></li>
-					<li><a href="https://www.quora.com/Benjamin-Nie"><img src="images/quora.jpg"></a></li>
-				</div>
-				<div id="right-menu-item">
-					<li><a href="blog.html" class="red">Blog</a></li>
-					<li><a href="projects.html" class="blue">Projects</a></li>
-					<li><a href="about.html" class="purple">About</a></li>
-					<li><a href="contact.html" class="green">Contact</a></li>
-				</div>
-			</ul>
-		</div>
-		
+		<?php
+        # generate navbar
+        $navbar_content = file_get_contents("navbar.html");
+        echo $navbar_content;
+        ?>
+	
 		<br><br><br><br><br><br><br><br><br>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet tortor a ipsum fringilla pellentesque. In pretium, magna posuere semper egestas, urna ligula consectetur nunc, vitae gravida velit leo a elit. Vivamus sed turpis faucibus dui consequat gravida. In ultrices ipsum arcu, eu cursus nisi malesuada id. Etiam vitae ante facilisis, mollis dui ut, laoreet eros. Donec volutpat gravida purus, et pharetra sapien posuere et. Quisque consectetur nisi id est tincidunt imperdiet. Nam pellentesque tortor vitae nibh volutpat, et imperdiet metus mattis. Sed iaculis vitae orci ut rhoncus. Phasellus feugiat diam vel metus scelerisque gravida. Nunc dui nulla, pellentesque faucibus sapien et, ultricies venenatis velit. Duis vel lectus bibendum, placerat ipsum eu, hendrerit orci. Aliquam adipiscing euismod metus a ornare. Phasellus faucibus laoreet metus a bibendum. Vestibulum aliquam sapien eget mi volutpat, eget semper ante rhoncus. Suspendisse et erat id risus vestibulum porta. </p>
 		<br><br><br>
