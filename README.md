@@ -5,7 +5,7 @@ Please feel free to use my design as a template for your own website - Sharing i
 Actions List:
 
 Immediate:
-- Set up blog using Python(Django) and mySQL
+- Get Projects Page functional 
 - Add Github logo
 - Add Hamburger menu
 
