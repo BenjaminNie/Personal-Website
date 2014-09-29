@@ -42,8 +42,11 @@
 		var_dump($json[0]);
 		echo "<br> <br> <br> <br>";
 
-		var_dump($json[0]["title"]);
-		echo "<br> <br> <br> <br>";
+		# for every json object
+		for ($i = 0; $i < count($json); $i++) {
+			echo "The title of array $i " , $json[$i]["title"];
+			# $json[$i]["title"]";
+		}
 
         ?>
 
