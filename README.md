@@ -6,10 +6,12 @@ Actions List:
 
 Immediate:
 - Get Projects Page functional 
+- Blog about VIM/EMACS
 - Add Github logo
 - Add Hamburger menu
 
 Short term:
+- Blog about new APIs
 - Enable Favricon
 - Enable Google Analytics
 - Read Javascript
