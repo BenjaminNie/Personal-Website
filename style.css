@@ -13,6 +13,12 @@ p {
 p.blog {
 }
 
+p.project {
+    max-width:700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 p.about {
 	margin-bottom:20px;
 }
@@ -145,4 +151,24 @@ a.black:hover {
 #contact-github {
 	color: #DAA520;
 	font-size: 20px;
+}
+
+#title {
+	font-size:50px;
+    max-width:700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#date {
+	font-size:32px;
+	max-width:700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#project-body {
+    max-width:700px;
+    margin-left: auto;
+    margin-right: auto;
 }

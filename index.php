@@ -19,7 +19,7 @@
         <?php
 		
 		# Extract JSON objects from file and convert content to string
-		$file_content = file_get_contents("json/July.json");
+		$file_content = file_get_contents("json/blog-posts/2014-07.json");
 		$json = json_decode($file_content, true);
 
 		#testing purposes

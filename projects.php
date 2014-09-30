@@ -13,25 +13,24 @@
         $navbar_content = file_get_contents("navbar.html");
         echo $navbar_content;
         ?>
-	
+
 		<br><br><br><br><br><br><br><br><br>
-		<p>Testing 123 123 123 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet tortor a ipsum fringilla pellentesque. In pretium, magna posuere semper egestas, urna ligula consectetur nunc, vitae gravida velit leo a elit. Vivamus sed turpis faucibus dui consequat gravida. In ultrices ipsum arcu, eu cursus nisi malesuada id. Etiam vitae ante facilisis, mollis dui ut, laoreet eros. Donec volutpat gravida purus, et pharetra sapien posuere et. Quisque consectetur nisi id est tincidunt imperdiet. Nam pellentesque tortor vitae nibh volutpat, et imperdiet metus mattis. Sed iaculis vitae orci ut rhoncus. Phasellus feugiat diam vel metus scelerisque gravida. Nunc dui nulla, pellentesque faucibus sapien et, ultricies venenatis velit. Duis vel lectus bibendum, placerat ipsum eu, hendrerit orci. Aliquam adipiscing euismod metus a ornare. Phasellus faucibus laoreet metus a bibendum. Vestibulum aliquam sapien eget mi volutpat, eget semper ante rhoncus. Suspendisse et erat id risus vestibulum porta. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
-		<br><br><br>
-		<p>Mauris nisi eros, porta sit amet commodo commodo, consequat quis justo. Morbi at commodo ligula, viverra faucibus orci. Nunc dui lorem, vehicula non risus vitae, iaculis tincidunt elit. Quisque tempus quis nisi sed facilisis. Nam accumsan tempus mauris, non placerat mi porta a. Pellentesque interdum nunc quis molestie dictum. Morbi a mauris auctor, scelerisque dui ac, congue enim. Suspendisse mattis, ligula non porta imperdiet, tellus leo suscipit libero, at tempor mi leo eget orci. Nunc a quam eget lorem hendrerit pulvinar. Nunc tempor facilisis ante. Nam auctor nibh aliquet purus lobortis, tincidunt egestas purus scelerisque. Nullam vitae rhoncus nulla. Sed vulputate nisl a turpis congue ullamcorper. Etiam at sapien a tellus ultricies posuere. Vivamus sollicitudin molestie ultricies. Proin est velit, ultricies gravida eleifend blandit, adipiscing ut nulla. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
-		<br><br><br>
-		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>	
+		<?php
+
+		# Extract JSON objects from file and convert content to string
+        $file_content = file_get_contents("json/projects/projects.json");
+		$json = json_decode($file_content, true);
+
+		# print all projects
+        for ($i = 0; $i < count($json); $i++) {
+            echo '<p><div id="title">',$json[$i]["title"],'</div><br>',
+					'<div id="date">',$json[$i]["date"],'</div><br>',
+					'<div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
+        }
+
+        ?>
+
+		<img src="projects/images/sec2012/IMG_6440.JPG" style=width:304px;height:228px>
 	</body>
 
 </html>
