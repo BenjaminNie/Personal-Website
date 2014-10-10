@@ -16,6 +16,12 @@
 		?>	
 
 		<br><br><br><br><br><br><br><br><br>
+
+
+		<p> <div id='title'> Blog posts coming soon!
+
+			<br> In the meantime, please feel free to check out my Projects, About, and Contact page.  Any feedback would be greatly appreciated! </div></p>
+		<!--
         <?php
 		
 		# Extract JSON objects from file and convert content to string
@@ -54,6 +60,8 @@
 		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>
 		<br><br><br>
 		<p>Etiam facilisis ultricies erat, sit amet placerat eros gravida ut. Sed venenatis dapibus velit, sed dictum ante sodales nec. Nulla blandit mattis nisl at cursus. Nulla quis quam vel justo faucibus tristique. Nam ac ante eget ligula facilisis adipiscing ut fermentum sapien. Curabitur sodales odio fringilla nisl suscipit euismod. Morbi ultrices a magna quis tincidunt. Etiam accumsan vitae enim eget sollicitudin. </p>	
+	-->	
+
 	</body>
 
 </html>
