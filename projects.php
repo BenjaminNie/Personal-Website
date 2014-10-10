@@ -29,8 +29,6 @@
         }
 
         ?>
-
-		<img src="json/projects/images/sec2012/IMG_6440.JPG" style=width:304px;height:228px>
 	</body>
 
 </html>

@@ -9,6 +9,7 @@ Immediate:
 - Blog about VIM/EMACS
 - Add Github logo
 - Add Hamburger menu
+- Add "Site Designed and Built by Ben Nie"
 
 Short term:
 - Blog about new APIs
