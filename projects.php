@@ -23,9 +23,9 @@
 
 		# print all projects
         for ($i = 0; $i < count($json); $i++) {
-            echo '<p><div id="title">',$json[$i]["title"],'</div><br>',
+            echo '<div id="title">',$json[$i]["title"],'</div><br>',
 					'<div id="date">',$json[$i]["date"],'</div><br>',
-					'<div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
+					'<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
         }
 
         ?>
