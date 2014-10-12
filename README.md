@@ -5,9 +5,7 @@ Please feel free to use my design as a template for your own website - Sharing i
 Actions List:
 
 Immediate:
-- Get Projects Page functional 
 - Blog about VIM/EMACS
-- Add Github logo
 - Add Hamburger menu
 - Add "Site Designed and Built by Ben Nie"
 
