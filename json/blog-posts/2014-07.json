@@ -1,15 +1,15 @@
 [
 	{
-		"title" : "The test blog 1",
+		"title" : "An ODE to VIM",
  	   	"categories" : ["life, work"],
 		"date": "2014-Jul-25",
-    	"post_body" : "blahblahblah number 2"
+    	"post_body" : "Vim is the best!"
 	},
 
 	{
-      	"title" : "The test blog 1",
+      	"title" : "Hello World!!!",
         "categories" : ["life, work"],
-        "date": "2014-Jul-25",
-        "post_body" : "blahblahblah number 2"
+        "date": "2014-Jul-22",
+        "post_body" : "Hi there!  Welcome to my blog, where I'll be sharing my personal thoughts related to life and work.  The world is curious and I can't wait to explore it."
     }
 ]
