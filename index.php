@@ -10,47 +10,26 @@
 	
 	<body>
 		<?php
-		# generate navbar
-		$navbar_content = file_get_contents("navbar.html");
-		echo $navbar_content;
-		?>	
-
+        # generate navbar
+        $navbar_content = file_get_contents("navbar.html");
+        echo $navbar_content;
+        ?>
+	
 		<br><br><br><br><br><br><br><br><br>
+		<?php
 
-
-		<p> 
-			Hey all!  My name is Ben Nie and this is my website.  It's still underconstruction and I'm having
-			tons of fun making it.  In the meantime, please feel free to browse around - I would love to hear 
-			your feedback. <br><br>
-
-			<div id='title'> Recent Blog Posts </div>
+		# Extract JSON objects from file and convert content to string
+		$file_content = file_get_contents("json/blog-posts/2014-07.json");
+		$json = json_decode($file_content, true);
 		
-			<?php
-			$num_blog_posts_printed = 0;
-			$file_content = file_get_contents("json/blog-posts/2014-07.json");	
-			$json = json_decode($file_content, true);
+		# print all projects
+		for ($i = 0; $i < count($json); $i++) {
+            echo '<div id="title">',$json[$i]["title"],'</div><br>',
+                    '<div id="date">',$json[$i]["date"],'</div><br>',
+                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
+        }
 
-			echo '<p>';
-			# print 7 most recent blog posts
-			for ($i = 0; $i < count($json); $i++) {
-				echo '- ', $json[$i]["title"], '<br>';
-			}
-			echo '</p>';
-			?>
-		</p>
-
-
-
-
-
-		<!--
-		#testing purposes
-		var_dump($json);
-		echo "<br> <br> <br> <br>";
-
-		var_dump($json[0]);
-		echo "<br> <br> <br> <br>";
-		-->
+        ?>
 
 	</body>
 
