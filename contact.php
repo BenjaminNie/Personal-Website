@@ -18,9 +18,9 @@
 		<p align="center"> <img id="contact-picture" src="images/paradise.jpg"> </p> <br>
 		<p class="contact"> I'm interested in job opportunities, sharing ideas, and non-profit causes</p>
 		<p class="contact">Connect with me on
-				<a href="ca.linkedin.com/in/benjaminnie/" class="green" id="contact-linkedin"> LinkedIn </a>,
+				<a href="http://ca.linkedin.com/in/benjaminnie/" class="green" id="contact-linkedin"> LinkedIn </a>,
 				<a href="http://twitter.com/niebenjamin" class="blue" id="contact-twitter"> Twitter </a>,
-				<a href="www.github.com/BenjaminNie" class="yellow" id="contact-github"> Github </a>,
+				<a href="http://www.github.com/BenjaminNie" class="yellow" id="contact-github"> Github </a>,
 				<a href="http://quora.com/Benjamin-Nie" class="red" id="contact-quora"> Quora </a>
 		</p>
 		<p class="contact">Contact me by e-mail at
