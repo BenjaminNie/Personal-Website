@@ -16,8 +16,12 @@
         ?>
 
 		<br><br><br><br><br><br><br><br><br>
-		<?php
 
+		<p><font size='4'>For a portfolio of my software projects and source code, please visit my
+			<a href="http://www.github.com/BenjaminNie" class="yellow" id="contact-github"> Github </a>
+		</font></p><br><br>
+		
+		<?php
 		# Extract JSON objects from file and convert content to string
         $file_content = file_get_contents("json/projects/projects.json");
 		$json = json_decode($file_content, true);

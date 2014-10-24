@@ -20,7 +20,7 @@
 		<p class="about">I'm a fourth year electrical engineering student with a love for software, hardware, and all the magic in between.  Check out my robotics and software projects on the 
 		<a href="/projects.html" class="blue" id="about-projects">Projects Page</a> and
 		<a href="http://github.com/BenjaminNie" class="red" id="about-Github">Github</a></p>
-		<p class="about">My interests include robotics, embedded devices, R-Pi/Arduino development, agile methodologies, quality software, and clean code.  Simplicity is the ultimate beauty, God lies in the details, and VIM is a great friend.  </p>
+		<p class="about">My interests include robotics, RESTful services, embedded devices, mobile apps, R-Pi/Arduino development, agile methodologies, quality software, and clean code.  Simplicity is the ultimate beauty, God lies in the details, and VIM is a great friend.  </p>
 		<p class="about">On my leisure days, I prefer craft beers, sports, and outdoor adventures.</p><br>
 	</body>
 
