@@ -20,6 +20,16 @@
 
 		# Extract JSON objects from file and convert content to string
 
+		$file_content = file_get_contents("json/blog-posts/2014-09.json");
+        $json = json_decode($file_content, true);
+
+        # print all projects
+        for ($i = 0; $i < count($json); $i++) {
+            echo '<div id="title">',$json[$i]["title"],'</div><br>',
+                    '<div id="date">',$json[$i]["date"],'</div><br>',
+                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
+        }
+
 		$file_content = file_get_contents("json/blog-posts/2014-08.json");
 		$json = json_decode($file_content, true);
 
