@@ -1,6 +1,7 @@
 <html>
 	
 	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<title> Ben Nie </title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
