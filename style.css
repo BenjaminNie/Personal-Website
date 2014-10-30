@@ -15,9 +15,6 @@ p {
 	margin-right: auto;
 }
 
-p.blog {
-}
-
 p.project {
     max-width:700px;
     margin-left: auto;
@@ -64,6 +61,10 @@ a.yellow:hover {
 a.black:hover {
 	color: #222222;
 }
+
+a.bluelink:visited {
+	color:blue;
+} 
 
 /* Used for menu items */
 #navbar {   /*exclusively for nav bar */
@@ -175,4 +176,9 @@ a.black:hover {
     max-width:700px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#blue-link {
+	text-decoration: underline;
+	text-color: blue;
 }
