@@ -16,7 +16,19 @@
         ?>
 	
 		<br><br><br><br><br><br><br><br><br>
+
 		<?php
+		
+		# Get today's timestamp
+		$currentYear = date("Y");
+		$currentMonth = date("m");
+
+	    /*
+		The plan:
+		1. if date == exists, parse all blog posts
+		2. increase date
+		3. return to one, if 1 is false, end
+		*/
 
 		# Extract JSON objects from file and convert content to string
 
