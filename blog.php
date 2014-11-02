@@ -28,6 +28,7 @@
 		1. if date == exists, parse all blog posts
 		2. increase date
 		3. return to one, if 1 is false, end
+		Next question: how to add Jquery so that each page only has 5 posts?  research online and with Jason
 		*/
 
 		# Extract JSON objects from file and convert content to string
