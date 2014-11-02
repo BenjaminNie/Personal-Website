@@ -23,6 +23,8 @@
 		$currentYear = date("Y");
 		$currentMonth = date("m");
 
+		$currentDate = "{$currentYear}" + "{$currentMonth}" + ".json";
+		echo currentDate;
 	    /*
 		The plan:
 		1. if date == exists, parse all blog posts
