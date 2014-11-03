@@ -27,10 +27,14 @@
 		$pathName = 'json/blog-posts/';
 		$fileName = "{$currentYear}" . "-" . "{$currentMonth}" . ".json";
 		$filePath = $pathName . $fileName;
+		echo 'this filepath is ' . $filePath . "<br>";
 
 		while (file_exists($filePath)) {
 			$file_content = file_get_contents($filePath);
 			$json = json_decode($file_content, true);
+			
+			echo 'old filepath is now ' + $filePath + '<br>';
+			echo 'Buzz <br>';
 
 			# print all projects
         	for ($i = 0; $i < count($json); $i++) {
@@ -39,9 +43,11 @@
                     '<p><div id="project-body">',$json[$i]["post_body"],
 					'</div></p><br><br><br><br>';
 				}	
-
+			echo 'Lightyear <br>';
 			$currentMonth--;
+			$fileName = "{$currentYear}" . "-" . "{$currentMonth}" . ".json";
 			$filePath = $pathName . $fileName;
+			echo "new filepath is " . $filePath . "<br><br><br><br>";
 		}
 		
 	    /*
