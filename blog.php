@@ -23,8 +23,27 @@
 		$currentYear = date("Y");
 		$currentMonth = date("m");
 
-		$currentDate = "{$currentYear}" + "{$currentMonth}" + ".json";
-		echo $currentDate;
+		# get most recent blog posts 
+		$pathName = 'json/blog-posts/';
+		$fileName = "{$currentYear}" . "-" . "{$currentMonth}" . ".json";
+		$filePath = $pathName . $fileName;
+
+		while (file_exists($filePath)) {
+			$file_content = file_get_contents($filePath);
+			$json = json_decode($file_content, true);
+
+			# print all projects
+        	for ($i = 0; $i < count($json); $i++) {
+            	echo '<div id="title">',$json[$i]["title"],'</div><br>',
+                    '<div id="date">',$json[$i]["date"],'</div><br>',
+                    '<p><div id="project-body">',$json[$i]["post_body"],
+					'</div></p><br><br><br><br>';
+				}	
+
+			$currentMonth--;
+			$filePath = $pathName . $fileName;
+		}
+		
 	    /*
 		The plan:
 		1. if date == exists, parse all blog posts
