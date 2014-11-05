@@ -1,7 +1,6 @@
 <html>
 	
 	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<title> Ben Nie </title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -10,6 +9,7 @@
 	</head>
 	
 	<body>
+
 		<?php
         # generate navbar
         $navbar_content = file_get_contents("navbar.html");
@@ -17,49 +17,37 @@
         ?>
 	
 		<br><br><br><br><br><br><br><br><br>
+
 		<?php
+		require_once('helper_fxn.php');
+		# Get today's timestamp
+		$currentYear = date("Y");
+		$currentMonth = date("m");
 
-		# Extract JSON objects from file and convert content to string
+		# get most recent blog posts 
+		$pathName = 'json/blog-posts/';
+		$fileName = getFileName($currentMonth, $currentYear);
+		$filePath = $pathName . $fileName;
 
-		$file_content = file_get_contents("json/blog-posts/2014-10.json");
-        $json = json_decode($file_content, true);
+		while (file_exists($filePath)) {
 
-        # print all projects
-        for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
+			#extract everything from json file
+			$file_content = file_get_contents($filePath);
+			$json = json_decode($file_content, true);
+			
+			# print all projects
+        	for ($i = 0; $i < count($json); $i++) {
+				echo '<div id="title">',$json[$i]["title"],'</div><br>',
                     '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
+                    '<p><div id="project-body">',$json[$i]["post_body"],
+					'</div></p><br><br><br><br>';
+				}	
 
-		$file_content = file_get_contents("json/blog-posts/2014-09.json");
-        $json = json_decode($file_content, true);
-
-        # print all projects
-        for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
-
-		$file_content = file_get_contents("json/blog-posts/2014-08.json");
-		$json = json_decode($file_content, true);
-
-		# print all projects
-        for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
-
-		$file_content = file_get_contents("json/blog-posts/2014-07.json");
-		$json = json_decode($file_content, true);
+			getNewDate($currentMonth, $currentYear);
+			$fileName = getFileName($currentMonth, $currentYear);
+			$filePath = $pathName . $fileName;
+		}
 		
-		# print all projects
-		for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
 
         ?>
 

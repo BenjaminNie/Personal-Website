@@ -5,17 +5,13 @@ Please feel free to use my design as a template for your own website - Sharing i
 Actions List:
 
 Immediate:
-- Blog about VIM/EMACS
 - Add Hamburger menu
 - Add "Site Designed and Built by Ben Nie"
 
 Short term:
-- Blog about new APIs
-- Enable Favricon
 - Enable Google Analytics
 - Read Javascript
 
 Long term:
 - Javascript map
 - Search bar
-
