@@ -9,6 +9,7 @@
 	</head>
 	
 	<body>
+
 		<?php
         # generate navbar
         $navbar_content = file_get_contents("navbar.html");
@@ -27,78 +28,26 @@
 		$pathName = 'json/blog-posts/';
 		$fileName = getFileName($currentMonth, $currentYear);
 		$filePath = $pathName . $fileName;
-		echo 'this filepath is ' . $filePath . "<br>";
 
 		while (file_exists($filePath)) {
+
+			#extract everything from json file
 			$file_content = file_get_contents($filePath);
 			$json = json_decode($file_content, true);
 			
-			echo 'old filepath is now ' + $filePath + '<br>';
-			echo 'Buzz <br>';
-
 			# print all projects
         	for ($i = 0; $i < count($json); $i++) {
-            	echo '<div id="title">',$json[$i]["title"],'</div><br>',
+				echo '<div id="title">',$json[$i]["title"],'</div><br>',
                     '<div id="date">',$json[$i]["date"],'</div><br>',
                     '<p><div id="project-body">',$json[$i]["post_body"],
 					'</div></p><br><br><br><br>';
 				}	
-			echo 'Lightyear <br>';
+
 			getNewDate($currentMonth, $currentYear);
 			$fileName = getFileName($currentMonth, $currentYear);
 			$filePath = $pathName . $fileName;
-			echo "new filepath is " . $filePath . "<br><br><br><br>";
 		}
 		
-	    /*
-		The plan:
-		1. if date == exists, parse all blog posts
-		2. increase date
-		3. return to one, if 1 is false, end
-		Next question: how to add Jquery so that each page only has 5 posts?  research online and with Jason
-		*/
-
-		# Extract JSON objects from file and convert content to string
-
-		$file_content = file_get_contents("json/blog-posts/2014-10.json");
-        $json = json_decode($file_content, true);
-
-        # print all projects
-        for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
-
-		$file_content = file_get_contents("json/blog-posts/2014-09.json");
-        $json = json_decode($file_content, true);
-
-        # print all projects
-        for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
-
-		$file_content = file_get_contents("json/blog-posts/2014-08.json");
-		$json = json_decode($file_content, true);
-
-		# print all projects
-        for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
-
-		$file_content = file_get_contents("json/blog-posts/2014-07.json");
-		$json = json_decode($file_content, true);
-		
-		# print all projects
-		for ($i = 0; $i < count($json); $i++) {
-            echo '<div id="title">',$json[$i]["title"],'</div><br>',
-                    '<div id="date">',$json[$i]["date"],'</div><br>',
-                    '<p><div id="project-body">',$json[$i]["post_body"],'</div></p><br><br><br><br>';
-        }
 
         ?>
 
