@@ -18,14 +18,14 @@
 		<br><br><br><br><br><br><br><br><br>
 
 		<?php
-		
+		require_once('helper_fxn.php');
 		# Get today's timestamp
 		$currentYear = date("Y");
 		$currentMonth = date("m");
 
 		# get most recent blog posts 
 		$pathName = 'json/blog-posts/';
-		$fileName = "{$currentYear}" . "-" . "{$currentMonth}" . ".json";
+		$fileName = getFileName($currentMonth, $currentYear);
 		$filePath = $pathName . $fileName;
 		echo 'this filepath is ' . $filePath . "<br>";
 
@@ -44,8 +44,8 @@
 					'</div></p><br><br><br><br>';
 				}	
 			echo 'Lightyear <br>';
-			$currentMonth--;
-			$fileName = "{$currentYear}" . "-" . "{$currentMonth}" . ".json";
+			getNewDate($currentMonth, $currentYear);
+			$fileName = getFileName($currentMonth, $currentYear);
 			$filePath = $pathName . $fileName;
 			echo "new filepath is " . $filePath . "<br><br><br><br>";
 		}
