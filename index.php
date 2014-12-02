@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
-	
+
 	<body>
 
 		<?php
@@ -15,7 +16,7 @@
         $navbar_content = file_get_contents("navbar.html");
         echo $navbar_content;
         ?>
-	
+
 		<br><br><br><br><br><br><br><br><br>
 
 		<?php
@@ -47,10 +48,24 @@
 			$fileName = getFileName($currentMonth, $currentYear);
 			$filePath = $pathName . $fileName;
 		}
+		?>
+	
+		<p> The window is currently <div id="test1"> unknown </div> pixels wide </p>
+
+		<script type="text/javascript">
+
+		window.addEventListener("resize", resizeNavbar);
+
+		function resizeNavbar() {
+			var windowWidth = $(window).width()
+			document.getElementById("test1").innerHTML = windowWidth;
+			
+			// if windowWidth < 700
+			if (windowWidth < 700) {
+				$("#right-menu-item").removeClass("FullMenu");
+			}
+		}
 		
-
-        ?>
-
 	</body>
 
 </html>
