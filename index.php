@@ -50,8 +50,6 @@
 		}
 		?>
 	
-		<p> The window is currently <div id="test1"> unknown </div> pixels wide </p>
-
 		<script type="text/javascript">
 
 		window.addEventListener("resize", resizeNavbar);
