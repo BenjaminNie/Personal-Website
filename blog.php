@@ -15,7 +15,7 @@
         $navbar_content = file_get_contents("navbar.html");
         echo $navbar_content;
         ?>
-	
+
 		<br><br><br><br><br><br><br><br><br>
 
 		<?php
@@ -23,12 +23,32 @@
 		# Get today's timestamp
 		$currentYear = date("Y");
 		$currentMonth = date("m");
-
-		# get most recent blog posts 
 		$pathName = 'json/blog-posts/';
-		$fileName = getFileName($currentMonth, $currentYear);
-		$filePath = $pathName . $fileName;
-
+		
+		# get most recent blog posts
+		$filePath = 'null';
+		while (!file_exists($filePath))
+		{
+			$fileName = getFileName($currentMonth, $currentYear);
+			$filePath = $pathName . $fileName;
+			
+			# found most recent blog
+			if (file_exists($filePath))
+				break;  
+			
+			# keep looking for most recent blog
+			else {
+				if (intval($currentMonth) == 1) {
+					$currentMonth = "12";
+					$currentYear = strval(intval($currentYear) - 1);
+				}
+					
+				else {
+					$currentMonth = strval(intval($currentMonth) - 1);
+				}
+			}
+		}
+					
 		while (file_exists($filePath)) {
 
 			#extract everything from json file
@@ -47,10 +67,22 @@
 			$fileName = getFileName($currentMonth, $currentYear);
 			$filePath = $pathName . $fileName;
 		}
+		?>
+	
+		<script type="text/javascript">
+
+		window.addEventListener("resize", resizeNavbar);
+
+		function resizeNavbar() {
+			var windowWidth = $(window).width()
+			document.getElementById("test1").innerHTML = windowWidth;
+			
+			// if windowWidth < 700
+			if (windowWidth < 700) {
+				$("#right-menu-item").removeClass("FullMenu");
+			}
+		}
 		
-
-        ?>
-
 	</body>
 
 </html>
