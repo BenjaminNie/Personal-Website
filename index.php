@@ -24,12 +24,32 @@
 		# Get today's timestamp
 		$currentYear = date("Y");
 		$currentMonth = date("m");
-
-		# get most recent blog posts 
 		$pathName = 'json/blog-posts/';
-		$fileName = getFileName($currentMonth, $currentYear);
-		$filePath = $pathName . $fileName;
-
+		
+		# get most recent blog posts
+		$filePath = 'null';
+		while (!file_exists($filePath))
+		{
+			$fileName = getFileName($currentMonth, $currentYear);
+			$filePath = $pathName . $fileName;
+			
+			# found most recent blog
+			if (file_exists($filePath))
+				break;  
+			
+			# keep looking for most recent blog
+			else {
+				if (intval($currentMonth) == 1) {
+					$currentMonth = "12";
+					$currentYear = strval(intval($currentYear) - 1);
+				}
+					
+				else {
+					$currentMonth = strval(intval($currentMonth) - 1);
+				}
+			}
+		}
+					
 		while (file_exists($filePath)) {
 
 			#extract everything from json file
